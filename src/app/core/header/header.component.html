@@ -1,8 +1,29 @@
-<nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#">Home</a></li>
-    </ul>
-  </div>
-</nav>
+<header>
+
+  <!-- nav bar -->
+  <nav class="navbar-fixed">
+    <div class="nav-wrapper">
+      <div class="navbar-logo-container">
+        <a href="#" class="brand-logo">Logo</a>
+
+        <!-- side nav trigger -->
+        <a class="button-collapse hide-on-med-and-up" data-activates="slide-out" materialize="sideNav">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+
+      <!-- desktop nav links -->
+      <ul id="nav-mobile" class="right hide-on-small-and-down">
+        <li><a href="#">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- side nav menu -->
+  <ul class="side-nav" id="slide-out">
+    <li><a href="#">test</a></li>
+  </ul>
+</header>
+
+
+
