@@ -1,10 +1,13 @@
+
+@import '../../../assets/base/colors.scss';
+
 .fab, .fas {
   width: 46px;
   height: 46px;
   border-radius: 46px;
   background: black;
   opacity: .7;
-  color: white;
+  color: var(--facebook-blue);
   font-size: 22px;
   text-align: center;
   padding-top: 13px;
@@ -23,3 +26,5 @@
   padding-left: 5px;
   display: inline-block;
 }
+
+
