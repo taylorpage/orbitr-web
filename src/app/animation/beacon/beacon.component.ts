@@ -23,14 +23,12 @@ export class BeaconComponent implements OnInit {
         this.beacon = true;
         this.all = 'active';
         this.activateOrbs();
-        this.activateSpeechBubbles();
       }
     } else {
       if (this.beacon) {
         this.beacon = false;
         this.all = 'inactive';
         this.deactivateOrbs();
-        this.deactivateBubbles();
       }
     }
   }
@@ -49,19 +47,6 @@ export class BeaconComponent implements OnInit {
     orbTwo: null,
     orbThree: null,
     orbFour: null,
-  }
-
-  // Speech bubble activation
-  public bubbleOne = 'inactive';
-  public bubbleTwo = 'inactive';
-  public bubbleThree = 'inactive';
-  public bubbleFour = 'inactive';
-
-  private bubbleTimeouts = {
-    bubbleOne: null,
-    bubbleTwo: null,
-    bubbleThree: null,
-    bubbleFour: null,
   }
 
   constructor(
@@ -99,39 +84,6 @@ export class BeaconComponent implements OnInit {
     Object.keys(this.orbTimeouts).forEach(orb => {
       clearTimeout(this.orbTimeouts[orb]);
       this.orbTimeouts[orb] = null;
-    });
-  }
-
-  // Activates speech bubble's visability
-  // NOTE: Orbs appearance ends after 3800ms
-  activateSpeechBubbles() {
-    this.bubbleTimeouts.bubbleOne = setTimeout(() => {
-      this.bubbleOne = 'active';
-    }, 4200);
-
-    this.bubbleTimeouts.bubbleTwo = setTimeout(() => {
-      this.bubbleTwo = 'active';
-    }, 4500);
-
-    this.bubbleTimeouts.bubbleThree = setTimeout(() => {
-      this.bubbleThree = 'active';
-    }, 5100);
-
-    this.bubbleTimeouts.bubbleFour = setTimeout(() => {
-      this.bubbleFour = 'active';
-    }, 4900);
-  }
-
-  // Deactivates speech bubble's visability
-  deactivateBubbles() {
-    this.bubbleOne = 'inactive';
-    this.bubbleTwo = 'inactive';
-    this.bubbleThree = 'inactive';
-    this.bubbleFour = 'inactive';
-
-    Object.keys(this.bubbleTimeouts).forEach(bubble => {
-      clearTimeout(this.bubbleTimeouts[bubble]);
-      this.bubbleTimeouts[bubble] = null;
     });
   }
 }

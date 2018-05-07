@@ -127,17 +127,3 @@
   background-size: cover;
   background-position: center;
 }
-
-.speech-bubble {
-  width: 150px;
-
-  &.bubble-one,
-  &.bubble-three {
-    margin-left: 60px;
-  }
-
-  &.bubble-two,
-  &.bubble-four {
-    margin-right: 60px;
-  }  
-}
