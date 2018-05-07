@@ -1,0 +1,143 @@
+.beacon-animation {
+  height: 400px;
+  padding: 250px 0;
+  background: url('../../../assets/images/map.png');
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.beacon-wrapper {
+  height: 400px;
+}
+
+.beacon-position {
+  position: relative;
+  height: 180px;
+  width: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: -100px;
+}
+
+.beacon-position:before {
+  content: "";
+  position: absolute;
+  margin-top: -100px;
+  height: 180px;
+  width: 180px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.beacon-ring {
+  box-shadow: 0px 0px 2px 2px white;
+  -webkit-animation: active 7s forwards linear;
+  animation: active 7s forwards linear;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.phone {
+  width: 50px;
+  position: absolute;
+  top: 40px;
+  margin-left: -25px;
+}
+
+
+@-webkit-keyframes active {
+  0%{
+    -webkit-transform:scale(.1);
+    opacity:1;
+  }
+  70%{
+    -webkit-transform:scale(2.5);
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+@keyframes active {
+  0%{
+    transform:scale(.1);
+    opacity:1;
+  }
+  70%{
+    transform:scale(2.5);
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+.orbs {
+  margin-top: 200px;
+}
+
+.orb {
+  margin: 0 auto;
+  border: 2px solid white;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+}
+
+.orb-wrapper-1 {
+  margin-top: -500px;
+  margin-left: 50px;
+}
+
+.orb-1 {
+  background: url('../../../assets/stock/stock-prof-1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.orb-wrapper-2 {
+  margin-top: -80px;
+  margin-left: -250px;
+}
+
+.orb-2 {
+  background: url('../../../assets/stock/stock-prof-2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.orb-wrapper-3 {
+  margin-top: -100px;
+  margin-left: 450px;
+}
+
+.orb-3 {
+  background: url('../../../assets/stock/stock-prof-3.png');
+  background-size: cover;
+  background-position: center; 
+}
+
+.orb-wrapper-4 {
+  margin-top: 30px;
+  margin-left: -100px;
+}
+
+.orb-4 {
+  background: url('../../../assets/stock/stock-prof-4.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.speech-bubble {
+  width: 150px;
+
+  &.bubble-one,
+  &.bubble-three {
+    margin-left: 60px;
+  }
+
+  &.bubble-two,
+  &.bubble-four {
+    margin-right: 60px;
+  }  
+}

@@ -10,6 +10,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { MainComponent } from './main/main.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { LocationComponent } from './features/location/location.component';
+import { BeaconComponent } from './animation/beacon/beacon.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LocationComponent } from './features/location/location.component';
     FooterComponent,
     MainComponent,
     SubscribeComponent,
-    LocationComponent
+    LocationComponent,
+    BeaconComponent
   ],
   imports: [
     BrowserModule,
