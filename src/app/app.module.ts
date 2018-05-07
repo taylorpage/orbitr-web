@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { LocationComponent } from './features/location/location.component';
 import { BeaconComponent } from './animation/beacon/beacon.component';
+import { FiltersComponent } from './features/filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BeaconComponent } from './animation/beacon/beacon.component';
     MainComponent,
     SubscribeComponent,
     LocationComponent,
-    BeaconComponent
+    BeaconComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,

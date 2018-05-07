@@ -1,5 +1,7 @@
+@import '../../../assets/modules/colors';
+
 footer {
-  background-color: black;
+  background-color: $ob-black;
   color: white;
   float: bottom;
   position: absolute;
