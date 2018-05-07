@@ -1,0 +1,35 @@
+.instagram-gradient-background {
+  background: $instagram-orange;
+  background: -moz-linear-gradient(top, $instagram-orange 0%, $instagram-red 33%, $instagram-purple 69%, $instagram-violet 100%);
+  background: -webkit-linear-gradient(top, $instagram-orange 0%,$instagram-red 33%,$instagram-purple 69%,$instagram-violet 100%);
+  background: linear-gradient(to bottom, $instagram-orange 0%, $instagram-red 33%, $instagram-purple 69%, $instagram-violet 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc832', endColorstr='#4c00ff',GradientType=0 );
+}
+
+.instagram-background {
+  background-color: $instagram-pink;
+}
+
+.facebook-background {
+  background-color: $facebook-blue;
+}
+
+.twitter-background {
+  background-color: $twitter-blue;
+}
+
+.youtube-background {
+  background-color: $youtube-red;
+}
+
+.google-plus-background {
+  background-color: $google-red;
+}
+
+.email-icon-background {
+  background-color: blue;
+}
+
+.material-icons {
+  cursor: pointer;
+}
