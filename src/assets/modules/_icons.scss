@@ -1,8 +1,8 @@
 .instagram-gradient-background {
   background: $instagram-orange;
-  background: -moz-linear-gradient(45deg, $instagram-orange 0%, $instagram-red 33%, $instagram-purple 69%, $instagram-violet 100%);
-  background: -webkit-linear-gradient(45deg, $instagram-orange 0%,$instagram-red 33%,$instagram-purple 69%,$instagram-violet 100%);
-  background: linear-gradient(45deg, $instagram-orange 0%, $instagram-red 33%, $instagram-purple 69%, $instagram-violet 100%);
+  background: -moz-linear-gradient(45deg, $instagram-orange 0%, $instagram-red 55%, $instagram-purple 75%, $instagram-violet 100%);
+  background: -webkit-linear-gradient(45deg, $instagram-orange 0%,$instagram-red 55%,$instagram-purple 75%,$instagram-violet 100%);
+  background: linear-gradient(45deg, $instagram-orange 0%, $instagram-red 55%, $instagram-purple 75%, $instagram-violet 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc832', endColorstr='#4c00ff',GradientType=0 );
 }
 

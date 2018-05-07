@@ -8,6 +8,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { MaterializeModule } from 'angular2-materialize';
 import { MainComponent } from './main/main.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { LocationComponent } from './features/location/location.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
