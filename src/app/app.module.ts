@@ -7,13 +7,15 @@ import { FooterComponent } from './core/footer/footer.component';
 
 import { MaterializeModule } from 'angular2-materialize';
 import { MainComponent } from './main/main.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    SubscribeComponent
   ],
   imports: [
     BrowserModule,
