@@ -14,3 +14,17 @@ $instagram-pink: rgb(210, 0, 129);
 // Main colors
 $ob-black: rgb(40, 40, 40);
 $ob-grey: rgb(200, 200, 200);
+$ob-purple: rgb(92, 0, 222);
+$ob-dark-blue: rgb(58, 86, 241);
+$ob-blue: rgb(8, 124, 255);
+$ob-light-blue: rgb(0, 179, 248);
+$ob-teal: rgb(0, 249, 248);
+$ob-green: rgb(0, 255, 202);
+
+.ob-gradient {
+  background: $ob-blue;
+  background: -moz-linear-gradient(45deg, $ob-blue 0%, $ob-purple 100%);
+  background: -webkit-linear-gradient(45deg, $ob-blue 0%, $ob-purple 100%);
+  background: linear-gradient(45deg, $ob-blue 0%, $ob-purple 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$ob-blue, endColorstr=$ob-purple, GradientType=1 );
+}

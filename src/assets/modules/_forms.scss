@@ -1,0 +1,12 @@
+.noUi-target {
+  background-color: white;
+  width: 80%;
+}
+
+.noUi-connect,
+.noUi-origin,
+.noUi-horizontal .noUi-handle, 
+.noUi-vertical .noUi-handle,
+.noUi-target.noUi-horizontal .noUi-tooltip {
+  background-color: $ob-green;
+}
