@@ -13,6 +13,13 @@ export class FiltersComponent implements OnInit {
   @ViewChild('slider') slider: ElementRef;
   @ViewChild('slider2') slider2: ElementRef;
 
+  public selectOptions = [
+    'friendship',
+    'dating',
+    'events',
+    'networking'
+  ];
+
   constructor() { }
 
   ngOnInit() {

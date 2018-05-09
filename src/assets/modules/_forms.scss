@@ -1,12 +1,36 @@
 .noUi-target {
   background-color: white;
-  width: 80%;
 }
 
 .noUi-connect,
 .noUi-origin,
-.noUi-horizontal .noUi-handle, 
+.noUi-horizontal .noUi-handle,
 .noUi-vertical .noUi-handle,
 .noUi-target.noUi-horizontal .noUi-tooltip {
   background-color: $ob-green;
+}
+
+input[type="radio"]:not(:checked) + label:before,
+input[type="radio"]:not(:checked) + label:after {
+  border-color: white;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="radio"].with-gap:checked + label:after {
+  border-color: $ob-green;
+  background-color: $ob-green;
+}
+
+.radio-group {
+  label {
+    color: white;
+  }
+}
+
+.select-wrapper input.select-dropdown {
+  border-bottom: 3px solid white;
+}
+
+.select-wrapper span.caret {
+  color: white;
 }

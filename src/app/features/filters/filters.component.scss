@@ -3,5 +3,11 @@
 .outter {
   background-color: $ob-grey;
   color: white;
-  padding: 80px 0;
+}
+
+.radio-group {
+  p {
+    display: inline;
+    margin-right: 10px;
+  }
 }
