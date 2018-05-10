@@ -1,5 +1,5 @@
 .noUi-target {
-  background-color: white;
+  background-color: $ob-dark-grey;
 }
 
 .noUi-connect,
@@ -7,18 +7,18 @@
 .noUi-horizontal .noUi-handle,
 .noUi-vertical .noUi-handle,
 .noUi-target.noUi-horizontal .noUi-tooltip {
-  background-color: $ob-green;
+  background-color: $ob-purple;
 }
 
 input[type="radio"]:not(:checked) + label:before,
 input[type="radio"]:not(:checked) + label:after {
-  border-color: white;
+  border-color: $ob-dark-grey;
 }
 
 input[type="radio"]:checked + label:after,
 input[type="radio"].with-gap:checked + label:after {
-  border-color: $ob-green;
-  background-color: $ob-green;
+  border-color: $ob-purple;
+  background-color: $ob-purple;
 }
 
 .radio-group {
@@ -27,10 +27,20 @@ input[type="radio"].with-gap:checked + label:after {
   }
 }
 
+.dropdown-content li > a,
+.dropdown-content li > span {
+  color: white;
+}
+
+.dropdown-content {
+  background-color: $ob-black;
+}
+
 .select-wrapper input.select-dropdown {
-  border-bottom: 3px solid white;
+  border-bottom: 2px solid $ob-dark-grey;;
 }
 
 .select-wrapper span.caret {
-  color: white;
+  color: black;
 }
+
