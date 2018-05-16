@@ -1,0 +1,52 @@
+@import '../../../assets/modules/colors';
+
+.messages {
+  // padding: 0 50px;
+  margin: auto;
+  width: 80%;
+}
+
+.message {
+  background-color: $ob-black;
+  height: 100px;
+  max-width: 500px;
+  border-bottom: 1px solid $ob-dark-grey;
+
+  .col.s9 {
+    padding-top: 20px;
+
+    .message-location {
+      margin-left: 5px;
+    }
+  }
+}
+
+.message-name,
+.message-text,
+.message-location {
+  color: white;
+}
+
+.message-name {
+  display: inline;
+}
+
+.message-location {
+  i {
+    font-size: 14px;
+  }
+  display: inline;
+}
+
+.message-text {
+  margin-top: 5px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-color: blue;
+}

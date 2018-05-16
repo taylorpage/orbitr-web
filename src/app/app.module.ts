@@ -12,6 +12,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { LocationComponent } from './features/location/location.component';
 import { BeaconComponent } from './animation/beacon/beacon.component';
 import { FiltersComponent } from './features/filters/filters.component';
+import { MessagesComponent } from './features/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FiltersComponent } from './features/filters/filters.component';
     SubscribeComponent,
     LocationComponent,
     BeaconComponent,
-    FiltersComponent
+    FiltersComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

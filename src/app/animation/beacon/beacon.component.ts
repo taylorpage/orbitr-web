@@ -12,11 +12,11 @@ import { AppService } from '../../shared/app.service';
   styleUrls: ['./beacon.component.scss'],
   animations: bounceAnimations
 })
-export class BeaconComponent implements OnInit {
+export class BeaconComponent {
 
   @ViewChild('beaconElement') beaconElement: ElementRef;
 
-  @HostListener('window:scroll', ['$event']) 
+  @HostListener('window:scroll', ['$event'])
   scroll(event) {
     if (this.appService.detectVisibleElement(this.beaconElement)) {
       if (!this.beacon) {
@@ -53,8 +53,6 @@ export class BeaconComponent implements OnInit {
     private appService: AppService
   ) { }
 
-  ngOnInit() {}
-  
   // Activates orb's visibility with time offset
   activateOrbs() {
     this.orbTimeouts.orbOne = setTimeout(() => {
