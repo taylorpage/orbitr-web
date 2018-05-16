@@ -26,6 +26,21 @@ export const bounceAnimations = [
   ])
 ];
 
+export const dropAnimations = [
+  trigger('drop', [
+    state('active', style({
+      transform: 'translate3d(0, 0, 0)',
+      opacity: '1'
+    })),
+    state('inactive', style({
+      transform: 'translate3d(0, -100%, 0)',
+      opacity: 0
+    })),
+    transition('active => inactive', animate('400ms ease-in-out')),
+    transition('inactive => active', animate('400ms ease-in-out'))
+  ]),
+];
+
 export const slideAnimations = [
   trigger('slide', [
     state('active', style({
@@ -33,7 +48,7 @@ export const slideAnimations = [
       opacity: '1'
     })),
     state('inactive', style({
-      transform: 'translate3d(0, -100%, 0)',
+      transform: 'translate3d(-100%, 0, 0)',
       opacity: 0
     })),
     transition('active => inactive', animate('400ms ease-in-out')),

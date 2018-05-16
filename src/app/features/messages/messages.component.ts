@@ -8,7 +8,7 @@ import { AppService } from '../../shared/app.service';
   styleUrls: ['./messages.component.scss'],
   animations: slideAnimations
 })
-export class MessagesComponent implements OnInit {
+export class MessagesComponent {
 
   @ViewChild('messageElement') messageElement: ElementRef;
 
@@ -36,9 +36,6 @@ export class MessagesComponent implements OnInit {
         this.hideMessages();
       }
     }
-  }
-
-  ngOnInit() {
   }
 
   showMessages() {
