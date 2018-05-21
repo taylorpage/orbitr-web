@@ -1,5 +1,8 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { slideAnimations } from '../../animation/animations';
+
+import { messages } from './messages';
+
 import { AppService } from '../../shared/app.service';
 
 @Component({
@@ -13,6 +16,8 @@ export class MessagesComponent {
   @ViewChild('messageElement') messageElement: ElementRef;
 
   public animate = false;
+
+  public messages = messages;
 
   public message1 = 'inactive';
   public message2 = 'inactive';
@@ -30,11 +35,6 @@ export class MessagesComponent {
         this.animate = true;
         this.showMessages();
       }
-    } else {
-      if (this.animate) {
-        this.animate = false;
-        this.hideMessages();
-      }
     }
   }
 
@@ -51,5 +51,4 @@ export class MessagesComponent {
     this.message3 = 'inactive';
     this.message4 = 'inactive';
   }
-
 }

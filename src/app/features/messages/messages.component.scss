@@ -4,6 +4,10 @@
   // padding: 0 50px;
   margin: auto;
   width: 80%;
+
+  .row {
+    margin-bottom: 0px !important;
+  }
 }
 
 .message {
@@ -48,5 +52,24 @@
   border-radius: 80px;
   margin-top: 10px;
   margin-left: 5px;
-  background-color: blue;
+  background-size: cover;
+  background-position: center;
+
+  &.profile-pic-1 {
+    background-image: url('../../../assets/stock/stock-prof-1.png');
+  }
+
+  &.profile-pic-2 {
+    background-image: url('../../../assets/stock/stock-prof-2.png');
+  }
+
+  &.profile-pic-3 {
+    background-image: url('../../../assets/stock/stock-prof-3.png');
+  }
+
+  &.profile-pic-4 {
+    background-image: url('../../../assets/stock/stock-prof-4.png');
+  }
 }
+
+
