@@ -1,6 +1,6 @@
-<div #beaconElement class="beacon-animation">
+<div #beaconElement class="beacon-animation box-shadow">
   <div [@bounce]="all" class="beacon-wrapper">
-    
+
     <!-- Phone and beacon animation -->
     <div class="beacon-position" [ngClass]="{ 'beacon-ring': beacon }"></div>
 
@@ -9,20 +9,19 @@
       <div class="orb-wrapper-1">
         <div [@bounce]="orbOne" class="orb orb-1"></div>
       </div>
-      
+
       <div class="orb-wrapper-2">
         <div [@bounce]="orbTwo" class="orb orb-2"></div>
       </div>
-      
+
       <div class="orb-wrapper-3">
         <div [@bounce]="orbThree" class="orb orb-3"></div>
       </div>
-      
+
       <div class="orb-wrapper-4">
         <div [@bounce]="orbFour" class="orb orb-4"></div>
       </div>
     </div>
-    
+
   </div>
 </div>
-  

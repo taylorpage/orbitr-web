@@ -23,6 +23,7 @@
     "angular2-materialize": "^15.1.10",
     "core-js": "^2.5.4",
     "materialize-css": "^0.100.2",
+    "npm": "^6.0.1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

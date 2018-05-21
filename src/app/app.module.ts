@@ -13,6 +13,7 @@ import { LocationComponent } from './features/location/location.component';
 import { BeaconComponent } from './animation/beacon/beacon.component';
 import { FiltersComponent } from './features/filters/filters.component';
 import { MessagesComponent } from './features/messages/messages.component';
+import { MobileComponent } from './features/mobile/mobile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MessagesComponent } from './features/messages/messages.component';
     LocationComponent,
     BeaconComponent,
     FiltersComponent,
-    MessagesComponent
+    MessagesComponent,
+    MobileComponent
   ],
   imports: [
     BrowserModule,

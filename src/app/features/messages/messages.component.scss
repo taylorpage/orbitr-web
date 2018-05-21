@@ -1,9 +1,14 @@
 @import '../../../assets/modules/colors';
 
+.outter {
+  color: white;
+}
+
 .messages {
   // padding: 0 50px;
   margin: auto;
   width: 80%;
+  border-radius: 20px;
 
   .row {
     margin-bottom: 0px !important;
@@ -11,10 +16,16 @@
 }
 
 .message {
+  cursor: pointer;
   background-color: $ob-black;
   height: 100px;
   max-width: 500px;
   border-bottom: 1px solid $ob-dark-grey;
+
+  &:hover {
+    background-color: $ob-dark-grey;
+    transition-duration: 800ms;
+  }
 
   .col.s9 {
     padding-top: 20px;

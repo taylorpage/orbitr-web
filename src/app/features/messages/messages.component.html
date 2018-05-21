@@ -1,37 +1,39 @@
-<div class="container" #messageElement>
-  <div class="row">
-    <div class="col s12 m12 l6">
-      <h1>Share your thoughts with the people around you</h1>
-    </div>
-    <div class="col s12 m12 l6 messages">
-
-      <!-- messages -->
-      <div *ngFor="let message of messages; let i = index" class="row">
-        <div [@slide]="this[message.id]" class="col s12 message">
-
-          <div class="row">
-
-            <!-- profile pic -->
-            <div class="col s3">
-              <div class="profile-pic profile-pic-{{i + 1}}"></div>
-            </div>
-
-            <!-- message content -->
-            <div class="col s9">
-              <h5 class="message-name">{{ message.name }}</h5>
-              <p class="message-location">
-                <span>
-                  <i class="material-icons">location_on</i>
-                </span>
-                {{ message.location }}
-              </p>
-              <p class="message-text">{{ message.message }}</p>
-            </div>
-          </div>
-
-        </div>
+<div class="outter ob-gradient">
+  <div class="container" #messageElement>
+    <div class="row">
+      <div class="col s12 m12 l6">
+        <h1>Share your thoughts with the people around you</h1>
       </div>
+      <div class="col s12 m12 l6 messages">
 
+        <!-- messages -->
+        <div *ngFor="let message of messages; let i = index" class="row">
+          <div [@slide]="this[message.id]" class="col s12 message">
+
+            <div class="row">
+
+              <!-- profile pic -->
+              <div class="col s3">
+                <div class="profile-pic profile-pic-{{i + 1}}"></div>
+              </div>
+
+              <!-- message content -->
+              <div class="col s9">
+                <h5 class="message-name">{{ message.name }}</h5>
+                <p class="message-location">
+                  <span>
+                    <i class="material-icons">location_on</i>
+                  </span>
+                  {{ message.location }}
+                </p>
+                <p class="message-text">{{ message.message }}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

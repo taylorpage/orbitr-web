@@ -1,9 +1,13 @@
+@import '../../../assets/modules/colors';
+@import '../../../assets/modules/base';
+
 .beacon-animation {
   height: 400px;
   padding: 250px 0;
   background: url('../../../assets/images/map.png');
   background-size: cover;
   margin: 0 auto;
+  border-radius: 20px;
 }
 
 .beacon-wrapper {
