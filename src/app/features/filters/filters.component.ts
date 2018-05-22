@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { dropAnimations } from '../../animation/animations';
+import { AppService } from '../../shared/app.service';
 
 declare const noUiSlider;
 declare const wNumb;
@@ -6,12 +8,25 @@ declare const wNumb;
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss']
+  styleUrls: ['./filters.component.scss'],
+  animations: dropAnimations
 })
 export class FiltersComponent implements OnInit {
 
   @ViewChild('slider') slider: ElementRef;
   @ViewChild('slider2') slider2: ElementRef;
+  @ViewChild('filtersElem') filtersElem: ElementRef;
+
+  public filters = 'inactive';
+
+  @HostListener('window:scroll', ['$event'])
+  scroll(event) {
+    if (this.appService.detectVisibleElement(this.filtersElem)) {
+      if (this.filters === 'inactive') {
+        this.filters = 'active';
+      }
+    }
+  }
 
   public selectOptions = [
     'friendship',
@@ -20,7 +35,9 @@ export class FiltersComponent implements OnInit {
     'networking'
   ];
 
-  constructor() { }
+  constructor(
+    private appService: AppService
+  ) { }
 
   ngOnInit() {
     this.createNoUiSliders();

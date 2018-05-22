@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
-import { slideAnimations } from '../../animation/animations';
+import { slideAnimations, dropAnimations } from '../../animation/animations';
 
 import { messages } from './messages';
 
@@ -9,15 +9,16 @@ import { AppService } from '../../shared/app.service';
   selector: 'app-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.scss'],
-  animations: slideAnimations
+  animations: [slideAnimations, dropAnimations]
 })
 export class MessagesComponent {
 
-  @ViewChild('messageElement') messageElement: ElementRef;
+  @ViewChild('messagesElement') messagesElement: ElementRef;
 
   public animate = false;
 
   public messages = messages;
+  public messagesShow = 'inactive';
 
   public message1 = 'inactive';
   public message2 = 'inactive';
@@ -30,9 +31,10 @@ export class MessagesComponent {
 
   @HostListener('window:scroll', ['$event'])
   scroll(event) {
-    if (this.appService.detectVisibleElement(this.messageElement)) {
+    if (this.appService.detectVisibleElement(this.messagesElement)) {
       if (!this.animate) {
         this.animate = true;
+        this.messagesShow = 'active';
         this.showMessages();
       }
     }
