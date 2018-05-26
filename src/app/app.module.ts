@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
@@ -15,6 +16,7 @@ import { FiltersComponent } from './features/filters/filters.component';
 import { MessagesComponent } from './features/messages/messages.component';
 import { MobileComponent } from './features/mobile/mobile.component';
 import { SubscribeMainComponent } from './subscribe/subscribe-main/subscribe-main.component';
+import { SubscribeFormComponent } from './subscribe/subscribe-form/subscribe-form.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,14 @@ import { SubscribeMainComponent } from './subscribe/subscribe-main/subscribe-mai
     MessagesComponent,
     MobileComponent,
     SubscribeMainComponent,
+    SubscribeFormComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterializeModule
+    MaterializeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
