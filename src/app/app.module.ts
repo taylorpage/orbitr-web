@@ -14,6 +14,7 @@ import { BeaconComponent } from './animation/beacon/beacon.component';
 import { FiltersComponent } from './features/filters/filters.component';
 import { MessagesComponent } from './features/messages/messages.component';
 import { MobileComponent } from './features/mobile/mobile.component';
+import { SubscribeMainComponent } from './subscribe/subscribe-main/subscribe-main.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MobileComponent } from './features/mobile/mobile.component';
     BeaconComponent,
     FiltersComponent,
     MessagesComponent,
-    MobileComponent
+    MobileComponent,
+    SubscribeMainComponent,
   ],
   imports: [
     BrowserModule,

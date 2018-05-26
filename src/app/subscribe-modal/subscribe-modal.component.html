@@ -1,7 +1,7 @@
 <!-- Modal Trigger -->
 <a
   class="waves-effect waves-light btn modal-trigger"
-  href="#subscribe-modal"
+  href="#subscribe-modal-{{id}}"
   (click)="openModal()"
 >
   subscribe
@@ -9,7 +9,7 @@
 
 <!-- Modal Structure -->
 <div
-  id="subscribe-modal"
+  id="subscribe-modal-{{id}}"
   class="modal"
   materialize="modal"
   [materializeActions]="modalActions"

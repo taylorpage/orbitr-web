@@ -1,20 +1,19 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input } from '@angular/core';
 
 import { MaterializeAction } from 'angular2-materialize';
 
 @Component({
-  selector: 'app-subscribe',
+  selector: 'app-subscribe-modal',
   templateUrl: './subscribe-modal.component.html',
   styleUrls: ['./subscribe-modal.component.scss']
 })
-export class SubscribeModalComponent implements OnInit {
+export class SubscribeModalComponent {
+
+  @Input() id: number;
 
   modalActions = new EventEmitter<string|MaterializeAction>();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   openModal() {
     this.modalActions.emit({ action: "modal", params: ['open'] });
