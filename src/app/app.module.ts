@@ -8,7 +8,7 @@ import { FooterComponent } from './core/footer/footer.component';
 
 import { MaterializeModule } from 'angular2-materialize';
 import { MainComponent } from './main/main.component';
-import { SubscribeComponent } from './subscribe/subscribe.component';
+import { SubscribeModalComponent } from './subscribe-modal/subscribe-modal.component';
 import { LocationComponent } from './features/location/location.component';
 import { BeaconComponent } from './animation/beacon/beacon.component';
 import { FiltersComponent } from './features/filters/filters.component';
@@ -21,7 +21,7 @@ import { MobileComponent } from './features/mobile/mobile.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    SubscribeComponent,
+    SubscribeModalComponent,
     LocationComponent,
     BeaconComponent,
     FiltersComponent,

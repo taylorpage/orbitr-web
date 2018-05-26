@@ -4,10 +4,10 @@ import { MaterializeAction } from 'angular2-materialize';
 
 @Component({
   selector: 'app-subscribe',
-  templateUrl: './subscribe.component.html',
-  styleUrls: ['./subscribe.component.scss']
+  templateUrl: './subscribe-modal.component.html',
+  styleUrls: ['./subscribe-modal.component.scss']
 })
-export class SubscribeComponent implements OnInit {
+export class SubscribeModalComponent implements OnInit {
 
   modalActions = new EventEmitter<string|MaterializeAction>();
 
