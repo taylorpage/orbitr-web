@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+// Services
+import { SubscribeService } from '../shared/subscribe.service';
+
 @Component({
   selector: 'app-subscribe-form',
   templateUrl: './subscribe-form.component.html',
@@ -11,7 +14,8 @@ export class SubscribeFormComponent implements OnInit {
   public subscriptionForm: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private subsribeService: SubscribeService
   ) { }
 
   ngOnInit() {
@@ -27,7 +31,9 @@ export class SubscribeFormComponent implements OnInit {
   subscribe() {
     if (this.subscriptionForm.valid) {
       const email = this.subscriptionForm.get('email').value;
-      console.log(email);
+
+      this.subsribeService.subscribe(email)
+        .then(message => console.log(message));
     }
   }
 
