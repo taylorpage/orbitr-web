@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular
 import { dropAnimations } from '../../animation/animations';
 import { AppService } from '../../shared/app.service';
 import { profiles } from '../../data/profiles.js';
-import { genderFilter } from './filters';
+import { filter } from './filters';
 
 declare const noUiSlider;
 declare const wNumb;
@@ -41,18 +41,31 @@ export class FiltersComponent implements OnInit {
     'networking'
   ];
 
+  // The initial filter values
+  public filterValues = {
+    age: [18, 100],
+    distance: 500,
+    gender: 'any',
+    status: 'any'
+  };
+
   constructor(
     private appService: AppService
   ) { }
 
   ngOnInit() {
     this.createNoUiSliders();
+
+    // Do the initial filter
+    this.filter();
   }
 
   // Creates the initial sliders
   createNoUiSliders() {
+
+    // Creates the age slider
     noUiSlider.create(this.slider.nativeElement, {
-      start: [23, 45],
+      start: [this.filterValues.age[0], this.filterValues.age[1]],
       connect: true,
       step: 1,
       range: { 'min': 18, 'max': 100 },
@@ -62,8 +75,9 @@ export class FiltersComponent implements OnInit {
       }
      });
 
+    // Creates the distance slider
     noUiSlider.create(this.slider2.nativeElement, {
-      start: [100],
+      start: [this.filterValues.distance],
       step: 1,
       connect: true,
       range: { 'min': 0, 'max': 500 },
@@ -72,15 +86,44 @@ export class FiltersComponent implements OnInit {
         from: value => Math.ceil(value),
       }
     });
+
+    // Listen for value changes in sliders
+    this.observeSliders();
+  }
+
+  // Listens for value changes
+  observeSliders() {
+    this.slider.nativeElement.noUiSlider.on('change', () => {
+      const age = this.slider.nativeElement.noUiSlider.get();
+      this.filterValues.age = age;
+      this.filter();
+    });
+
+    this.slider2.nativeElement.noUiSlider.on('change', () => {
+      const distance = this.slider2.nativeElement.noUiSlider.get();
+      this.filterValues.distance = distance;
+      this.filter();
+    });
+  }
+
+  changeGender(event: Event) {
+    this.filterValues.gender = event.target['id'];
+    this.filter();
+  }
+
+  changeStatus(event: Event) {
+    this.filterValues.status = event.target['value'];
+    this.filter();
   }
 
   // Filters profiles based on user input
-  filter(event: any, prop?: string, val?: number | number[]) {
-    if (prop === 'gender') {
-
-      // The id is based off of the value
-      const gender = event.target.id;
-      this.filteredProfiles = genderFilter(gender, this._profiles);
-    }
+  filter() {
+    this.filteredProfiles = filter(
+      this.filterValues.age,
+      this.filterValues.distance,
+      this.filterValues.gender,
+      this.filterValues.status,
+      this._profiles
+    )
   }
 }

@@ -5,8 +5,10 @@
         <div class="row">
 
           <!-- profiles -->
-          <div *ngFor="let profile of filteredProfiles; let i = index">
-            <div class="profile-pic {{ profile.class }} position-{{ i + 1 }}"></div>
+          <div class="col s12">
+            <div *ngFor="let profile of filteredProfiles; let i = index">
+              <div class="profile-pic {{ profile.class }} position-{{ i + 1 }}"></div>
+            </div>
           </div>
 
           <!-- age slider -->
@@ -31,7 +33,7 @@
                     name="gender"
                     type="radio"
                     id="male"
-                    (change)="filter($event, 'gender')"
+                    (change)="changeGender($event)"
                   />
                   <label for="male">male</label>
                 </p>
@@ -40,7 +42,7 @@
                     name="gender"
                     type="radio"
                     id="female"
-                    (change)="filter($event, 'gender')"
+                    (change)="changeGender($event)"
                   />
                   <label for="female">female</label>
                 </p>
@@ -49,7 +51,7 @@
                     name="gender"
                     type="radio"
                     id="any"
-                    (change)="filter($event, 'gender')"
+                    (change)="changeGender($event)"
                     checked
                   />
                   <label for="any">any</label>
@@ -61,10 +63,13 @@
           <!-- account status select -->
           <div class="col s12">
             <h5>status</h5>
-            <select materialize="material_select" [materializeSelectOptions]="selectOptions">
-              <option *ngFor="let option of selectOptions" [value]="option">
-                {{option}}
-              </option>
+            <select
+              class="materialize-select"
+              materialize="material_select"
+              (change)="changeStatus($event)"
+              [materializeSelectOptions]="selectOptions"
+            >
+              <option *ngFor="let option of selectOptions" [value]="option">{{option}}</option>
             </select>
           </div>
 
