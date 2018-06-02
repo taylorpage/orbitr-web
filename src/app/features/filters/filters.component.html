@@ -4,8 +4,13 @@
       <div class="col s12 m12 l6 filters box-shadow">
         <div class="row">
 
+          <!-- profiles -->
+          <div *ngFor="let profile of filteredProfiles; let i = index">
+            <div class="profile-pic {{ profile.class }} position-{{ i + 1 }}"></div>
+          </div>
+
           <!-- age slider -->
-          <div class="col s12">
+          <div class="col s12 first-filter">
             <h5>age</h5>
             <div #slider id="slider"></div>
           </div>
@@ -22,16 +27,32 @@
               <h5>gender</h5>
               <form action="#">
                 <p>
-                  <input name="group1" type="radio" id="male" />
+                  <input
+                    name="gender"
+                    type="radio"
+                    id="male"
+                    (change)="filter($event, 'gender')"
+                  />
                   <label for="male">male</label>
                 </p>
                 <p>
-                  <input name="group1" type="radio" id="female" />
+                  <input
+                    name="gender"
+                    type="radio"
+                    id="female"
+                    (change)="filter($event, 'gender')"
+                  />
                   <label for="female">female</label>
                 </p>
                 <p>
-                  <input name="group1" type="radio" id="both" checked />
-                  <label for="both">both</label>
+                  <input
+                    name="gender"
+                    type="radio"
+                    id="any"
+                    (change)="filter($event, 'gender')"
+                    checked
+                  />
+                  <label for="any">any</label>
                 </p>
               </form>
             </div>

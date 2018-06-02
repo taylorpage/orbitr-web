@@ -17,4 +17,53 @@
   color: white;
   padding: 40px;
   border-radius: 20px;
+
+  .first-filter {
+    margin-top: 70px;
+  }
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  margin-top: 10px;
+  margin-left: 5px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 20px;
+  border: 2px solid white;
+
+  &.profile-pic-1 {
+    background-image: url('../../../assets/stock/stock-prof-1.png');
+  }
+
+  &.profile-pic-2 {
+    background-image: url('../../../assets/stock/stock-prof-2.png');
+  }
+
+  &.profile-pic-3 {
+    background-image: url('../../../assets/stock/stock-prof-3.png');
+  }
+
+  &.profile-pic-4 {
+    background-image: url('../../../assets/stock/stock-prof-4.png');
+  }
+
+  &.position-1 {
+    left: 20;
+  }
+
+  &.position-2 {
+    left: 80px;
+  }
+
+  &.position-3 {
+    left: 140px;
+  }
+
+  &.position-4 {
+    left: 200px;
+  }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { dropAnimations } from '../../animation/animations';
 import { AppService } from '../../shared/app.service';
+import { profiles } from '../../data/profiles.js';
+import { genderFilter } from './filters';
 
 declare const noUiSlider;
 declare const wNumb;
@@ -17,8 +19,6 @@ export class FiltersComponent implements OnInit {
   @ViewChild('slider2') slider2: ElementRef;
   @ViewChild('filtersElem') filtersElem: ElementRef;
 
-  public filters = 'inactive';
-
   @HostListener('window:scroll', ['$event'])
   scroll(event) {
     if (this.appService.detectVisibleElement(this.filtersElem)) {
@@ -28,7 +28,13 @@ export class FiltersComponent implements OnInit {
     }
   }
 
+  public filters = 'inactive';
+
+  private _profiles = profiles;
+  public filteredProfiles = this._profiles;
+
   public selectOptions = [
+    'any',
     'friendship',
     'dating',
     'events',
@@ -43,6 +49,7 @@ export class FiltersComponent implements OnInit {
     this.createNoUiSliders();
   }
 
+  // Creates the initial sliders
   createNoUiSliders() {
     noUiSlider.create(this.slider.nativeElement, {
       start: [23, 45],
@@ -65,5 +72,15 @@ export class FiltersComponent implements OnInit {
         from: value => Math.ceil(value),
       }
     });
+  }
+
+  // Filters profiles based on user input
+  filter(event: any, prop?: string, val?: number | number[]) {
+    if (prop === 'gender') {
+
+      // The id is based off of the value
+      const gender = event.target.id;
+      this.filteredProfiles = genderFilter(gender, this._profiles);
+    }
   }
 }
