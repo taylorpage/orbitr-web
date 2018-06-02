@@ -35,12 +35,14 @@ export class BeaconComponent {
 
   public beacon = false;
 
+  private animationDefault = this.appService.isMobileDevice ? 'active' : 'inactive';
+
   // Orb activation
-  public all = 'inactive';
-  public orbOne = 'inactive';
-  public orbTwo = 'inactive';
-  public orbThree = 'inactive';
-  public orbFour = 'inactive';
+  public all = this.animationDefault;
+  public orbOne = this.animationDefault;
+  public orbTwo = this.animationDefault;
+  public orbThree = this.animationDefault;
+  public orbFour = this.animationDefault;
 
   private orbTimeouts = {
     orbOne: null,

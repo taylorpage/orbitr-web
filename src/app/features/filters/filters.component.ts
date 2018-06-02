@@ -28,7 +28,7 @@ export class FiltersComponent implements OnInit {
     }
   }
 
-  public filters = 'inactive';
+  public filters = this.appService.isMobileDevice ? 'active' : 'inactive';
 
   private _profiles = profiles;
   public filteredProfiles = this._profiles;

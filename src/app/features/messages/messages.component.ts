@@ -16,14 +16,15 @@ export class MessagesComponent {
   @ViewChild('messagesElement') messagesElement: ElementRef;
 
   public animate = false;
+  private animationDefault = this.appService.isMobileDevice ? 'active' : 'inactive';
 
   public messages = messages;
-  public messagesShow = 'inactive';
+  public messagesShow = this.animationDefault;
 
-  public message1 = 'inactive';
-  public message2 = 'inactive';
-  public message3 = 'inactive';
-  public message4 = 'inactive';
+  public message1 = this.animationDefault;
+  public message2 = this.animationDefault;
+  public message3 = this.animationDefault;
+  public message4 = this.animationDefault;
 
   constructor(
     private appService: AppService

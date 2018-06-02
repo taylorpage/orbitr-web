@@ -11,7 +11,7 @@ import { dropAnimations } from '../../animation/animations';
 export class LocationComponent {
 
   @ViewChild('locationElem') locationElem: ElementRef;
-  public location = 'inactive';
+  public location = this.appService.isMobileDevice ? 'active' : 'inactive';
 
   constructor(
     private appService: AppService

@@ -11,7 +11,7 @@ import { dropAnimations } from '../../animation/animations';
 export class MobileComponent {
 
   @ViewChild('mobileElem') mobileElem: ElementRef;
-  public mobile = 'inactive';
+  public mobile = this.appService.isMobileDevice ? 'active' : 'inactive';
 
   constructor(
     private appService: AppService
