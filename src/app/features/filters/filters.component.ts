@@ -1,6 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { dropAnimations } from '../../animation/animations';
-import { AppService } from '../../shared/app.service';
 import { profiles } from '../../data/profiles.js';
 import { filter } from './filters';
 
@@ -10,25 +8,12 @@ declare const wNumb;
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss'],
-  animations: dropAnimations
+  styleUrls: ['./filters.component.scss']
 })
 export class FiltersComponent implements OnInit {
 
   @ViewChild('slider') slider: ElementRef;
   @ViewChild('slider2') slider2: ElementRef;
-  @ViewChild('filtersElem') filtersElem: ElementRef;
-
-  @HostListener('window:scroll', ['$event'])
-  scroll(event) {
-    if (this.appService.detectVisibleElement(this.filtersElem)) {
-      if (this.filters === 'inactive') {
-        this.filters = 'active';
-      }
-    }
-  }
-
-  public filters = this.appService.isMobileDevice ? 'active' : 'inactive';
 
   private _profiles = profiles;
   public filteredProfiles = this._profiles;
@@ -48,10 +33,6 @@ export class FiltersComponent implements OnInit {
     gender: 'any',
     status: 'any'
   };
-
-  constructor(
-    private appService: AppService
-  ) { }
 
   ngOnInit() {
     this.createNoUiSliders();
