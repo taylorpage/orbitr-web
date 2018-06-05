@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MnFullpageOptions } from 'ngx-fullpage';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  public options: MnFullpageOptions = new MnFullpageOptions({
+    navigation: true,
+    navigationPosition: 'right',
+    keyboardScrolling: true
+  });
 }

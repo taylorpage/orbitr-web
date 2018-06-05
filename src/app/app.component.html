@@ -1,10 +1,37 @@
 <div class="app">
   <app-header></app-header>
-  <app-main></app-main>
-  <app-mobile></app-mobile>
-  <app-location></app-location>
-  <app-filters></app-filters>
-  <app-messages></app-messages>
-  <app-subscribe-main></app-subscribe-main>
-  <app-footer></app-footer>
+  <div [mnFullpage]="options">
+    <div class="section fp-section fp-table">
+      <div class="fp-tableCell">
+        <app-main></app-main>
+      </div>
+    </div>
+    <div class="section fp-section fp-table">
+      <div class="fp-tableCell">
+        <app-mobile></app-mobile>
+      </div>
+    </div>
+    <div class="section fp-section fp-table">
+      <div class="fp-tableCell">
+        <app-location></app-location>
+      </div>
+    </div>
+    <div class="section fp-section fp-table">
+      <div class="fp-tableCell">
+        <app-filters></app-filters>
+      </div>
+    </div>
+    <div class="section fp-section fp-table">
+      <div class="fp-tableCell">
+        <app-messages></app-messages>
+      </div>
+    </div>
+    <div class="section fp-section fp-table">
+      <div class="fp-tableCell">
+        <app-subscribe-main></app-subscribe-main>
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </div>
 </div>
+

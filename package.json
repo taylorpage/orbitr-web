@@ -29,6 +29,7 @@
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "materialize-css": "^0.100.2",
+    "ngx-fullpage": "^4.0.6",
     "npm": "^6.1.0",
     "path": "^0.12.7",
     "rxjs": "^6.0.0",
