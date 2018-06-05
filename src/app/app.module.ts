@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
+import { MnFullpageModule } from 'ngx-fullpage';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
@@ -17,6 +18,7 @@ import { MessagesComponent } from './features/messages/messages.component';
 import { MobileComponent } from './features/mobile/mobile.component';
 import { SubscribeMainComponent } from './subscribe/subscribe-main/subscribe-main.component';
 import { SubscribeFormComponent } from './subscribe/subscribe-form/subscribe-form.component';
+import { VideoComponent } from './video/video.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { SubscribeFormComponent } from './subscribe/subscribe-form/subscribe-for
     MobileComponent,
     SubscribeMainComponent,
     SubscribeFormComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { SubscribeFormComponent } from './subscribe/subscribe-form/subscribe-for
     MaterializeModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    MnFullpageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
