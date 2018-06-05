@@ -1,9 +1,5 @@
 @import '../../../assets/modules/colors';
 
-.outter {
-  color: white;
-}
-
 .messages {
   // padding: 0 50px;
   margin: auto;
@@ -34,12 +30,6 @@
       margin-left: 5px;
     }
   }
-}
-
-.message-name,
-.message-text,
-.message-location {
-  color: white;
 }
 
 .message-name {
