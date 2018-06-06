@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial');
+@import '../modules/_media-queries.scss';
 
 $ob-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $ob-drop-shadow: 0 5px 3px rgb(60,60,60);
@@ -6,6 +7,11 @@ $ob-drop-shadow: 0 5px 3px rgb(60,60,60);
 html,
 body {
   font-family: 'Questrial';
+  color: white;
+}
+
+h1 {
+  font-size: 4.2rem;
 }
 
 .container {
@@ -21,4 +27,22 @@ body {
   filter: drop-shadow($ob-drop-shadow);
 }
 
+// styles for small screens and down
+@media #{$small-and-down} {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+// styles for medium screens and larger
+@media #{$medium-and-up} {
+}
+// styles for medium screens and down
+@media #{$medium-and-down} {
+}
+// styles for large screens and up
+@media #{$large-and-up} {
+}
+// styles for extra large screens and up
+@media #{$extra-large-and-up} {
+}
 

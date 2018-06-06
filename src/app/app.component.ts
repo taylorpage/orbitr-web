@@ -18,7 +18,8 @@ export class AppComponent {
     3: 'inactive',
     4: 'inactive',
     5: 'inactive',
-    6: 'inactive'
+    6: 'inactive',
+    7: 'inactive'
   }
 
   public options: MnFullpageOptions = new MnFullpageOptions({
