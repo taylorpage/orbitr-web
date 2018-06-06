@@ -11,6 +11,7 @@ import { dropAnimations } from './animation/animations';
 export class AppComponent {
 
   public beaconAnimationTrigger: EventEmitter<boolean> = new EventEmitter<boolean>();
+  public messageAnimationTrigger: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public animations = {
     2: 'inactive',
@@ -27,13 +28,26 @@ export class AppComponent {
     onLeave: (index: number, nextIndex: number, direction: string): void => {
       this.animations[nextIndex] = 'active';
 
-      // Trigger beacon when location component is scrolled
-      if (nextIndex === 3) {
-        this.beaconAnimationTrigger.emit(true);
-      } else if (nextIndex === 2 || nextIndex === 4) {
-        this.beaconAnimationTrigger.emit(false);
-      }
+      this.triggerBeacon(nextIndex);
+      this.triggerMessages(nextIndex);
     }
   });
 
+  triggerBeacon(componentIndex: number) {
+    // Trigger beacon when location component is scrolled
+    if (componentIndex === 3) {
+      this.beaconAnimationTrigger.emit(true);
+    } else if (componentIndex === 2 || componentIndex === 4) {
+      this.beaconAnimationTrigger.emit(false);
+    }
+  }
+
+  triggerMessages(componentIndex: number) {
+    // Trigger message when message component is scrolled
+    if (componentIndex === 5) {
+      this.messageAnimationTrigger.emit(true);
+    } else if (componentIndex === 4 || componentIndex === 6) {
+      this.messageAnimationTrigger.emit(false);
+    }
+  }
 }

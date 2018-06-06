@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { slideAnimations } from '../../animation/animations';
 import { messages } from './messages';
 
@@ -8,9 +8,9 @@ import { messages } from './messages';
   styleUrls: ['./messages.component.scss'],
   animations: [slideAnimations]
 })
-export class MessagesComponent {
+export class MessagesComponent implements OnInit {
 
-  @ViewChild('messagesElement') messagesElement: ElementRef;
+  @Input() messageTrigger: EventEmitter<boolean>;
 
   public animate = false;
 
@@ -20,6 +20,16 @@ export class MessagesComponent {
   public message2 = 'inactive';
   public message3 = 'inactive';
   public message4 = 'inactive';
+
+  ngOnInit() {
+    this.subscribeToMessageTrigger();
+  }
+
+  subscribeToMessageTrigger() {
+    this.messageTrigger.subscribe(trigger => {
+      trigger ? this.showMessages() : this.hideMessages();
+    });
+  }
 
   showMessages() {
     setTimeout(() => this.message1 = 'active', 500);
