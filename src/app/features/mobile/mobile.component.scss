@@ -1,5 +1,26 @@
-@import '../../../assets/modules/_colors.scss';
+@import '../../../assets/modules/colors';
+@import '../../../assets/modules/media-queries';
 
 .mobile {
   width: 250px;
+}
+
+@media #{$medium-and-down} {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .mobile {
+    width: 160px;
+  }
+}
+
+@media #{$small-and-down} {
+
+}
+
+@media #{$extra-small-and-down} {
+  .mobile {
+    width: 100px;
+  }
 }

@@ -29,8 +29,21 @@ h1 {
 
 // styles for small screens and down
 @media #{$small-and-down} {
+  html,
+  body {
+    text-align: center;
+  }
+
   h1 {
     font-size: 3.2rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding-top: 30px;
   }
 }
 // styles for medium screens and larger
