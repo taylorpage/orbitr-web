@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { MnFullpageOptions } from 'ngx-fullpage';
 import { dropAnimations } from './animation/animations';
 
@@ -9,6 +9,8 @@ import { dropAnimations } from './animation/animations';
   animations: dropAnimations
 })
 export class AppComponent {
+
+  public beaconAnimationTrigger: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public animations = {
     2: 'inactive',
@@ -24,6 +26,13 @@ export class AppComponent {
     keyboardScrolling: true,
     onLeave: (index: number, nextIndex: number, direction: string): void => {
       this.animations[nextIndex] = 'active';
+
+      // Trigger beacon when location component is scrolled
+      if (nextIndex === 3) {
+        this.beaconAnimationTrigger.emit(true);
+      } else if (nextIndex === 2 || nextIndex === 4) {
+        this.beaconAnimationTrigger.emit(false);
+      }
     }
   });
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener, Input, EventEmitter } from '@angular/core';
 
 // Animations
 import { bounceAnimations } from '../animations';
@@ -12,26 +12,9 @@ import { AppService } from '../../shared/app.service';
   styleUrls: ['./beacon.component.scss'],
   animations: bounceAnimations
 })
-export class BeaconComponent {
+export class BeaconComponent implements OnInit {
 
-  @ViewChild('beaconElement') beaconElement: ElementRef;
-
-  @HostListener('window:scroll', ['$event'])
-  scroll(event) {
-    if (this.appService.detectVisibleElement(this.beaconElement)) {
-      if (!this.beacon) {
-        this.beacon = true;
-        this.all = 'active';
-        this.activateOrbs();
-      }
-    } else {
-      if (this.beacon) {
-        this.beacon = false;
-        this.all = 'inactive';
-        this.deactivateOrbs();
-      }
-    }
-  }
+  @Input() beaconTrigger: EventEmitter<boolean>;
 
   public beacon = false;
 
@@ -54,6 +37,24 @@ export class BeaconComponent {
   constructor(
     private appService: AppService
   ) { }
+
+  ngOnInit() {
+    this.subscribeToBeaconTrigger();
+  }
+
+  subscribeToBeaconTrigger() {
+    this.beaconTrigger.subscribe(trigger => {
+      if (trigger) {
+        this.beacon = true;
+        this.all = 'active';
+        this.activateOrbs();
+      } else {
+        this.beacon = false;
+        this.all = 'inactive';
+        this.deactivateOrbs();
+      }
+    });
+  }
 
   // Activates orb's visibility with time offset
   activateOrbs() {
