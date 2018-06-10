@@ -60,11 +60,11 @@ export class BeaconComponent implements OnInit {
   activateOrbs() {
     this.orbTimeouts.orbOne = setTimeout(() => {
       this.orbOne = 'active';
-    }, 1600 );
+    }, 1800 );
 
     this.orbTimeouts.orbTwo = setTimeout(() => {
       this.orbTwo = 'active';
-    }, 2000);
+    }, 1600);
 
     this.orbTimeouts.orbThree = setTimeout(() => {
       this.orbThree = 'active';
@@ -72,7 +72,7 @@ export class BeaconComponent implements OnInit {
 
     this.orbTimeouts.orbFour = setTimeout(() => {
       this.orbFour = 'active';
-    }, 3000);
+    }, 2600);
   }
 
   // Deactivates orb's visibility

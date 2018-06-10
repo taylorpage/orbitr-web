@@ -1,5 +1,6 @@
 @import '../../../assets/modules/colors';
 @import '../../../assets/modules/base';
+@import '../../../assets/modules/media-queries';
 
 .beacon-animation {
   height: 400px;
@@ -90,6 +91,7 @@
 
 .orb-wrapper-1 {
   margin-top: -420px;
+  margin-right: -100px;
 }
 
 .orb-1 {
@@ -99,7 +101,7 @@
 }
 
 .orb-wrapper-2 {
-  margin-left: -200px;
+  margin-left: -160px;
 }
 
 .orb-2 {
@@ -110,7 +112,7 @@
 
 .orb-wrapper-3 {
   margin-top: 100px;
-  margin-left: -200px;
+  margin-left: -160px;
 }
 
 .orb-3 {
@@ -128,4 +130,55 @@
   background: url('../../../assets/stock/stock-prof-4.png');
   background-size: cover;
   background-position: center;
+}
+
+@media #{$medium-and-down} {
+  .beacon-animation {
+    padding-top: 100px;
+  }
+
+  .beacon-position {
+    margin-top: -20px;
+  }
+}
+
+@media #{$small-and-down} {
+  .beacon-animation {
+    // padding-bottom: 0px;
+    padding-top: 100px;
+    height: 200px;
+  }
+
+  .orb {
+    width: 65px;
+    height: 65px;
+  }
+
+  .beacon-position {
+    margin-top: -40px;
+  }
+}
+
+@media #{$extra-small-and-down} {
+  .beacon-animation {
+    padding-bottom: 0px;
+  }
+
+  .beacon-position {
+    margin-top: -100px;
+  }
+
+  .orb {
+    width: 50px;
+    height: 50px;
+  }
+
+  .orb-wrapper-1 {
+    margin-top: -380px;
+  }
+
+  .orb-wrapper-3 {
+    margin-top: 20px;
+    margin-left: -80px;
+  }
 }

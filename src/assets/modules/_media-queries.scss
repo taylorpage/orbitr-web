@@ -11,6 +11,7 @@ $large-screen: 1200px !default;
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
 $large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$large-and-down: "only screen and (max-width : #{large-screen})" !default;
 $extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
 $extra-small-and-down: "only screen and (max-width : #{$extra-small-screen})" !default;
 $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
