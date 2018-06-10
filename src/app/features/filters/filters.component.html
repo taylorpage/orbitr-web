@@ -11,16 +11,82 @@
             </div>
           </div>
 
-          <!-- age slider -->
-          <div class="col s12 first-filter">
-            <h5>age</h5>
-            <div #slider id="slider"></div>
+          <!-- age radio group -->
+          <div class="col s12">
+            <div class="radio-group">
+              <h5>age</h5>
+              <form action="#">
+                <p>
+                  <input
+                    name="age"
+                    type="checkbox"
+                    id="21"
+                    (change)="changeAge($event)"
+                    [checked]="filterValues.ages[21]"
+                  />
+                  <label for="21">18-21</label>
+                </p>
+                <p>
+                  <input
+                    name="age"
+                    type="checkbox"
+                    id="35"
+                    (change)="changeAge($event)"
+                    [checked]="filterValues.ages[35]"
+                  />
+                  <label for="35">22-35</label>
+                </p>
+                <p>
+                  <input
+                    name="age"
+                    type="checkbox"
+                    id="36"
+                    (change)="changeAge($event)"
+                    [checked]="filterValues.ages[36]"
+                  />
+                  <label for="36">36+</label>
+                </p>
+              </form>
+            </div>
           </div>
 
-          <!-- distance slider -->
+          <!-- distance radio group -->
           <div class="col s12">
-            <h5>distance</h5>
-            <div #slider2 id="slider2"></div>
+            <div class="radio-group">
+              <h5>distance</h5>
+              <form action="#">
+                <p>
+                  <input
+                    name="distance"
+                    type="radio"
+                    id="100"
+                    (change)="changeDistance($event)"
+                    [checked]="filterValues.distance === 100"
+                  />
+                  <label for="100">100</label>
+                </p>
+                <p>
+                  <input
+                    name="distance"
+                    type="radio"
+                    id="200"
+                    (change)="changeDistance($event)"
+                    [checked]="filterValues.distance === 200"
+                  />
+                  <label for="200">200</label>
+                </p>
+                <p>
+                  <input
+                    name="distance"
+                    type="radio"
+                    id="300"
+                    (change)="changeDistance($event)"
+                    [checked]="filterValues.distance === 300"
+                  />
+                  <label for="300">300</label>
+                </p>
+              </form>
+            </div>
           </div>
 
           <!-- gender radio group -->
@@ -31,46 +97,65 @@
                 <p>
                   <input
                     name="gender"
-                    type="radio"
+                    type="checkbox"
                     id="male"
                     (change)="changeGender($event)"
+                    [checked]="filterValues.genders.male"
                   />
                   <label for="male">male</label>
                 </p>
                 <p>
                   <input
                     name="gender"
-                    type="radio"
+                    type="checkbox"
                     id="female"
                     (change)="changeGender($event)"
+                    [checked]="filterValues.genders.female"
                   />
                   <label for="female">female</label>
-                </p>
-                <p>
-                  <input
-                    name="gender"
-                    type="radio"
-                    id="any"
-                    (change)="changeGender($event)"
-                    checked
-                  />
-                  <label for="any">any</label>
                 </p>
               </form>
             </div>
           </div>
 
-          <!-- account status select -->
+          <!-- status radio group -->
           <div class="col s12">
-            <h5>status</h5>
-            <select
-              class="materialize-select"
-              materialize="material_select"
-              (change)="changeStatus($event)"
-              [materializeSelectOptions]="selectOptions"
-            >
-              <option *ngFor="let option of selectOptions" [value]="option">{{option}}</option>
-            </select>
+            <div class="radio-group">
+              <h5>status</h5>
+              <form action="#">
+                <p>
+                  <input
+                    name="status"
+                    type="checkbox"
+                    id="friendship"
+                    (change)="changeStatus($event)"
+                    [checked]="filterValues.statuses.friendship"
+                  />
+                  <label for="friendship">friends</label>
+                </p>
+                <p>
+                  <input
+                    name="status"
+                    type="checkbox"
+                    id="dating"
+                    (change)="changeStatus($event)"
+                    [checked]="filterValues.statuses.dating"
+                  />
+                  <label for="dating">dating</label>
+                </p>
+                <p>
+                  <input
+                    name="status"
+                    type="checkbox"
+                    id="networking"
+                    (change)="changeStatus($event)"
+                    [checked]="filterValues.statuses.networking"
+                    checked
+                  />
+                  <label for="networking">networking</label>
+                </p>
+              </form>
+            </div>
           </div>
 
         </div>

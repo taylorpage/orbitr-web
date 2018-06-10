@@ -5,7 +5,7 @@ export const profiles = [
     age: 25,
     distance: 100,
     gender: 'male',
-    status: 'friendship',
+    statuses: ['friendship', 'networking'],
     class: 'profile-pic-1'
   },
   {
@@ -14,7 +14,7 @@ export const profiles = [
     age: 22,
     distance: 240,
     gender: 'female',
-    status: 'dating',
+    statuses: ['dating', 'friendship'],
     class: 'profile-pic-2'
   },
   {
@@ -23,16 +23,16 @@ export const profiles = [
     age: 34,
     distance: 300,
     gender: 'male',
-    status: 'networking',
+    statuses: ['networking', 'dating'],
     class: 'profile-pic-3'
   },
   {
     id: 'user4',
     name: 'Lydia Yin',
     age: 36,
-    distance: 400,
+    distance: 300,
     gender: 'female',
-    status: 'events',
+    statuses: ['friendship', 'dating', 'networking'],
     class: 'profile-pic-4'
   },
 ];

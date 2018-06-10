@@ -1,4 +1,5 @@
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { inherits } from 'util';
 
 export const bounceAnimations = [
   trigger('bounce', [
@@ -30,11 +31,14 @@ export const dropAnimations = [
   trigger('drop', [
     state('active', style({
       transform: 'translate3d(0, 0, 0)',
-      opacity: '1'
+      opacity: '1',
+      zIndex: 'inherit'
     })),
     state('inactive', style({
       transform: 'translate3d(0, -100%, 0)',
-      opacity: 0
+      opacity: 0,
+      zIndex: -1,
+      position: 'relative'
     })),
     transition('active => inactive', animate('800ms ease-in-out')),
     transition('inactive => active', animate('800ms ease-in-out'))

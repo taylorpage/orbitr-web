@@ -1,4 +1,5 @@
 @import '../../../assets/modules/colors';
+@import '../../../assets/modules/media-queries';
 
 .radio-group {
   p {
@@ -69,4 +70,8 @@
   &.position-4 {
     left: 200px;
   }
+}
+
+@media #{$medium-and-down} {
+
 }

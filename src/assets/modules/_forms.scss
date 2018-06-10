@@ -43,3 +43,8 @@ input[type="radio"].with-gap:checked + label:after {
 .select-wrapper span.caret {
   color: white;
 }
+
+[type="checkbox"]:checked + label:before {
+  border-right: 3px solid $ob-purple;
+  border-bottom: 3px solid $ob-purple;
+}
