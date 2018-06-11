@@ -11,12 +11,15 @@
             </div>
           </div>
 
-          <!-- age radio group -->
+          <!-- age checkbox group -->
           <div class="col s12">
             <div class="radio-group">
               <h5>age</h5>
               <form action="#">
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.ages[21] }"
+                >
                   <input
                     name="age"
                     type="checkbox"
@@ -26,7 +29,10 @@
                   />
                   <label for="21">18-21</label>
                 </p>
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.ages[35] }"
+                >
                   <input
                     name="age"
                     type="checkbox"
@@ -36,7 +42,10 @@
                   />
                   <label for="35">22-35</label>
                 </p>
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.ages[36] }"
+                >
                   <input
                     name="age"
                     type="checkbox"
@@ -55,7 +64,10 @@
             <div class="radio-group">
               <h5>distance</h5>
               <form action="#">
-                <p>
+                <p
+                  class="radio-container"
+                  [ngClass]="{ 'checked': filterValues.distance === 100 }"
+                >
                   <input
                     name="distance"
                     type="radio"
@@ -63,9 +75,12 @@
                     (change)="changeDistance($event)"
                     [checked]="filterValues.distance === 100"
                   />
-                  <label for="100">100</label>
+                  <label for="100">100 feet</label>
                 </p>
-                <p>
+                <p
+                  class="radio-container"
+                  [ngClass]="{ 'checked': filterValues.distance === 200 }"
+                >
                   <input
                     name="distance"
                     type="radio"
@@ -73,9 +88,12 @@
                     (change)="changeDistance($event)"
                     [checked]="filterValues.distance === 200"
                   />
-                  <label for="200">200</label>
+                  <label for="200">200 feet</label>
                 </p>
-                <p>
+                <p
+                  class="radio-container"
+                  [ngClass]="{ 'checked': filterValues.distance === 300 }"
+                >
                   <input
                     name="distance"
                     type="radio"
@@ -83,7 +101,7 @@
                     (change)="changeDistance($event)"
                     [checked]="filterValues.distance === 300"
                   />
-                  <label for="300">300</label>
+                  <label for="300">300 feet</label>
                 </p>
               </form>
             </div>
@@ -94,7 +112,10 @@
             <div class="radio-group">
               <h5>gender</h5>
               <form action="#">
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.genders.male }"
+                >
                   <input
                     name="gender"
                     type="checkbox"
@@ -104,7 +125,10 @@
                   />
                   <label for="male">male</label>
                 </p>
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.genders.female }"
+                >
                   <input
                     name="gender"
                     type="checkbox"
@@ -118,12 +142,15 @@
             </div>
           </div>
 
-          <!-- status radio group -->
+          <!-- status checkbox group -->
           <div class="col s12">
             <div class="radio-group">
               <h5>status</h5>
               <form action="#">
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.statuses.friendship }"
+                >
                   <input
                     name="status"
                     type="checkbox"
@@ -133,7 +160,10 @@
                   />
                   <label for="friendship">friends</label>
                 </p>
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.statuses.dating }"
+                >
                   <input
                     name="status"
                     type="checkbox"
@@ -143,7 +173,10 @@
                   />
                   <label for="dating">dating</label>
                 </p>
-                <p>
+                <p
+                  class="checkbox-container"
+                  [ngClass]="{ 'checked': filterValues.statuses.networking }"
+                >
                   <input
                     name="status"
                     type="checkbox"

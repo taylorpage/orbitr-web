@@ -44,7 +44,39 @@ input[type="radio"].with-gap:checked + label:after {
   color: white;
 }
 
-[type="checkbox"]:checked + label:before {
-  border-right: 3px solid $ob-purple;
-  border-bottom: 3px solid $ob-purple;
+[type="checkbox"]:checked + label:before,
+[type="checkbox"] + label:before,
+[type="radio"]:checked + label:before,
+[type="radio"]:checked + label:after,
+[type="radio"] + label:before {
+  display: none;
+}
+
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked)+ label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  padding: 0px;
+}
+
+.radio-group .checkbox-container,
+.radio-group .radio-container {
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: $ob-border-radius;
+  transition-duration: $ob-button-transitions;
+}
+
+.radio-group .checkbox-container.checked,
+.radio-group .radio-container.checked {
+  background-color: $ob-purple;
+  border: 2px solid $ob-purple;
+  transition-duration: $ob-button-transitions;
+}
+
+@media #{$extra-small-and-down} {
+  .radio-group .checkbox-container,
+  .radio-group .radio-container {
+    padding: 10px;
+  }
 }

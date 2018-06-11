@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 @import '../modules/_media-queries.scss';
 
+// Shadows
 $ob-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $ob-drop-shadow: 0 5px 3px rgb(60,60,60);
+
+// Borders
+$ob-border-radius: 100px;
+
+// Transitions
+$ob-button-transitions: 800ms;
+$ob-hover-transitions: 500ms;
 
 html,
 body {

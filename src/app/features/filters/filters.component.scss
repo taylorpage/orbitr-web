@@ -73,5 +73,7 @@
 }
 
 @media #{$medium-and-down} {
-
+  .filters {
+    padding: 5px;
+  }
 }

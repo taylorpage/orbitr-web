@@ -1,4 +1,5 @@
 @import '../../../assets/modules/colors';
+@import '../../../assets/modules/base';
 
 .messages {
   // padding: 0 50px;
@@ -20,7 +21,7 @@
 
   &:hover {
     background-color: $ob-dark-grey;
-    transition-duration: 800ms;
+    transition-duration: $ob-hover-transitions;
   }
 
   .col.s9 {

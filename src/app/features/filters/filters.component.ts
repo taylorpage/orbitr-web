@@ -48,7 +48,7 @@ export class FiltersComponent implements OnInit {
   }
 
   changeDistance(event: Event) {
-    this.filterValues.distance = event.target['id'];
+    this.filterValues.distance = +event.target['id'];
     this.filter();
   }
 
