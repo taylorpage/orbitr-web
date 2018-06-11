@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { profiles } from '../../data/profiles.js';
 import { filter } from './filters';
+import { bounceAnimations } from '../../animation/animations';
 
 declare const noUiSlider;
 declare const wNumb;
@@ -8,12 +9,15 @@ declare const wNumb;
 @Component({
   selector: 'app-filters',
   templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss']
+  styleUrls: ['./filters.component.scss'],
+  animations: bounceAnimations
 })
 export class FiltersComponent implements OnInit {
 
   @ViewChild('slider') slider: ElementRef;
   @ViewChild('slider2') slider2: ElementRef;
+
+  public orbAnimations = 'active';
 
   private _profiles = profiles;
   public filteredProfiles = this._profiles;
@@ -64,12 +68,20 @@ export class FiltersComponent implements OnInit {
 
   // Filters profiles based on user input
   filter() {
-    this.filteredProfiles = filter(
-      this.filterValues.ages,
-      this.filterValues.distance,
-      this.filterValues.genders,
-      this.filterValues.statuses,
-      this._profiles
-    )
+    this.orbAnimations = 'inactive';
+
+    // The length of the bounce out animation
+    setTimeout(() => {
+      this.filteredProfiles = filter(
+        this.filterValues.ages,
+        this.filterValues.distance,
+        this.filterValues.genders,
+        this.filterValues.statuses,
+        this._profiles
+      );
+    }, 300);
+
+    // Bounce in animation
+    setTimeout(() => this.orbAnimations = 'active', 500);
   }
 }

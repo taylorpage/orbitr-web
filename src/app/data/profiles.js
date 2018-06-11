@@ -12,7 +12,7 @@ export const profiles = [
     id: 'user2',
     name: 'Angela Carlson',
     age: 22,
-    distance: 240,
+    distance: 200,
     gender: 'female',
     statuses: ['dating', 'friendship'],
     class: 'profile-pic-2'

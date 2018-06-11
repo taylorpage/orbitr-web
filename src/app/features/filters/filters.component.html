@@ -7,7 +7,7 @@
           <!-- profiles -->
           <div class="col s12">
             <div *ngFor="let profile of filteredProfiles; let i = index">
-              <div class="profile-pic {{ profile.class }} position-{{ i + 1 }}"></div>
+              <div [@bounce]="orbAnimations" class="profile-pic {{ profile.class }} position-{{ i + 1 }}"></div>
             </div>
           </div>
 

@@ -31,7 +31,7 @@
   width: 80px;
   height: 80px;
   border-radius: 80px;
-  margin-top: 10px;
+  margin-top: 40px;
   margin-left: 5px;
   background-size: cover;
   background-position: center;
@@ -56,19 +56,19 @@
   }
 
   &.position-1 {
-    left: 20;
+    margin-left: 0px;
   }
 
   &.position-2 {
-    left: 80px;
+    margin-left: 60px;
   }
 
   &.position-3 {
-    left: 140px;
+    margin-left: 120px;
   }
 
   &.position-4 {
-    left: 200px;
+    margin-left: 180px;
   }
 }
 
@@ -76,4 +76,27 @@
   .filters {
     padding: 5px;
   }
+
+  .profile-pic {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+
+    &.position-1 {
+      margin-left: 20px;
+    }
+
+    &.position-2 {
+      margin-left: 50px;
+    }
+
+    &.position-3 {
+      margin-left: 80px;
+    }
+
+    &.position-4 {
+      margin-left: 110px;
+    }
+  }
+
 }
