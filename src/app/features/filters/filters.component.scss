@@ -73,8 +73,23 @@
 }
 
 @media #{$small-and-down} {
+  .container {
+    margin-top: 10px;
+  }
+
   .filters {
     padding: 5px;
+  }
+
+  .filter-text {
+    h1 {
+      font-size: 2.9rem;
+      margin-top: 15px;
+    }
+
+    h5 {
+      display: none;
+    }
   }
 
   .profile-pic {
@@ -98,5 +113,13 @@
       margin-left: 110px;
     }
   }
+}
 
+@media #{$extra-small-and-down} {
+  .filters {
+    h5 {
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+  }
 }

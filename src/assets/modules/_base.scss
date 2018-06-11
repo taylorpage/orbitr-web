@@ -35,6 +35,19 @@ h1 {
   filter: drop-shadow($ob-drop-shadow);
 }
 
+// styles for extra large screens and up
+@media #{$extra-large-and-up} {
+}
+// styles for large screens and up
+@media #{$large-and-up} {
+}
+// styles for medium screens and down
+@media #{$medium-and-down} {
+}
+// styles for medium screens and larger
+@media #{$medium-and-up} {
+}
+
 // styles for small screens and down
 @media #{$small-and-down} {
   html,
@@ -54,16 +67,7 @@ h1 {
     padding-top: 30px;
   }
 }
-// styles for medium screens and larger
-@media #{$medium-and-up} {
-}
-// styles for medium screens and down
-@media #{$medium-and-down} {
-}
-// styles for large screens and up
-@media #{$large-and-up} {
-}
-// styles for extra large screens and up
-@media #{$extra-large-and-up} {
-}
 
+// styles for extra small screens and down
+@media #{$extra-small-and-down} {
+}
