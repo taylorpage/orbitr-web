@@ -23,9 +23,15 @@ export const filter = (
 };
 
 const determineAge = (ages: object, profileAge: number) => {
+  const maxAge = 36;
   for (const age in ages) {
-    if (ages[age] && +age >= profileAge) {
-      return true;
+    if (ages[age]) {
+      if (
+        (+age === maxAge && +age <= profileAge) ||
+        (+age !== maxAge && +age >= profileAge)
+      ) {
+        return true;
+      }
     }
   }
   return false;
