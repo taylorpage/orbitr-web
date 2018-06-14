@@ -1,9 +1,11 @@
 <div class="outter" #messagesElement>
   <div class="container">
     <div class="row">
+
       <div class="col s12 m12 l6">
-        <h1>Share your thoughts with the people around you</h1>
+        <h1>Connect With Messaging</h1>
       </div>
+
       <div class="col s12 m12 l6 messages">
         <!-- messages -->
         <div *ngFor="let message of messages; let i = index" class="row">
@@ -27,11 +29,10 @@
                 </p>
                 <p class="message-text">{{ message.message }}</p>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>

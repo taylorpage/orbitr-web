@@ -8,13 +8,13 @@ export const messages = [
   },
   {
     name: 'Angela Carlson',
-    location: 'Jefferson & Taylor',
+    location: 'North Point',
     message: 'Hey, it\'s going well!',
     id: 'message2',
     src: '../../../assets/stock/stock-prof-2.png'
   },
   {
-    name: 'Jorge Maharris',
+    name: 'Jorge Villa',
     location: 'USS Pampanito',
     message: 'Still up for getting some food?',
     id: 'message3',

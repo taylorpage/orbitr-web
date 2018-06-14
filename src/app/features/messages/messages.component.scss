@@ -1,5 +1,6 @@
 @import '../../../assets/modules/colors';
 @import '../../../assets/modules/base';
+@import '../../../assets/modules/media-queries.scss';
 
 .messages {
   // padding: 0 50px;
@@ -72,5 +73,26 @@
 
   &.profile-pic-4 {
     background-image: url('../../../assets/stock/stock-prof-4.png');
+  }
+}
+
+@media #{$small-and-down} {
+  .message {
+    height: 70px;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+  }
+  .message-name,
+  .message-text {
+    margin-left: -10px;
+  }
+
+  .message-text {
+    margin-top: -4px;
   }
 }
