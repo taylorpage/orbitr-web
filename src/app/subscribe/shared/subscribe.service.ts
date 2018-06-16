@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Http } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubscribeService {
+
+  public modalEmitter: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(
     private http: Http
@@ -15,5 +17,13 @@ export class SubscribeService {
       .toPromise()
       .then(res => res)
       .catch(err => console.log(err));
+  }
+
+  openModal() {
+    this.modalEmitter.emit('open');
+  }
+
+  closeModal() {
+    this.modalEmitter.emit('close');
   }
 }

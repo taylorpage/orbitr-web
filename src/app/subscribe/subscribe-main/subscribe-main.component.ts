@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { SubscribeService } from '../shared/subscribe.service';
 
 @Component({
   selector: 'app-subscribe-main',
   templateUrl: './subscribe-main.component.html',
   styleUrls: ['./subscribe-main.component.scss']
 })
-export class SubscribeMainComponent implements OnInit {
+export class SubscribeMainComponent {
 
-  constructor() { }
+  constructor(
+    private subscribeService: SubscribeService
+  ) { }
 
-  ngOnInit() {
+  openModal() {
+    this.subscribeService.openModal();
   }
 
 }
