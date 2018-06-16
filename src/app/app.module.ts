@@ -19,6 +19,7 @@ import { MobileComponent } from './features/mobile/mobile.component';
 import { SubscribeMainComponent } from './subscribe/subscribe-main/subscribe-main.component';
 import { SubscribeFormComponent } from './subscribe/subscribe-form/subscribe-form.component';
 import { VideoComponent } from './video/video.component';
+import { ModalComponent } from './core/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { VideoComponent } from './video/video.component';
     SubscribeMainComponent,
     SubscribeFormComponent,
     VideoComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
