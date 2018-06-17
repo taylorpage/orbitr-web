@@ -14,7 +14,7 @@ export class SubscribeService {
   ) { }
 
   subscribe(email: string) {
-    return this.http.post('http://127.0.0.1:8080/subscribe', { email: email })
+    return this.http.post('https://orbitr-web.herokuapp.com/subscribe', { email: email })
       .toPromise()
       .then(res => {
         this.modalEmitter.emit('success');
