@@ -3,7 +3,19 @@
 .modal {
   color: $ob-black;
 
-  .success {
-    padding: 20px 10px 100px 10px;
+  .modal-content {
+    height: 400px;
+  }
+
+  .loader {
+    text-align: center;
+    margin-top: 150px;
+  }
+
+  .success,
+  .form,
+  .error {
+    position: absolute;
+    top: 20px;
   }
 }

@@ -38,7 +38,7 @@ export const dropAnimations = [
       transform: 'translate3d(0, -100%, 0)',
       opacity: 0,
       zIndex: -1,
-      position: 'relative'
+      position: 'absolute'
     })),
     transition('active => inactive', animate('800ms ease-in-out')),
     transition('inactive => active', animate('800ms ease-in-out'))

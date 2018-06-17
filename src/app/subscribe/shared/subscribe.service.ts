@@ -14,6 +14,7 @@ export class SubscribeService {
   ) { }
 
   subscribe(email: string) {
+    this.modalEmitter.emit('loading');
     return this.http.post('https://orbitr-web.herokuapp.com/subscribe', { email: email })
       .toPromise()
       .then(res => {
@@ -22,7 +23,10 @@ export class SubscribeService {
         this.setEmail(res.json().email);
         return res;
       })
-      .catch(err => console.log(err.json()));
+      .catch(err => {
+        this.modalEmitter.emit('error');
+        console.log(err.json())
+      });
   }
 
   setEmail(email: string) {

@@ -8,18 +8,45 @@
   <div class="modal-content">
 
     <!-- subscription allowance -->
-    <div *ngIf="!subscribed">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
+    <div
+      class="form"
+      [@drop]="form"
+    >
+      <h4>Subscribe To Updates</h4>
+      <p>Send us your email address to stay up to date to upcoming release dates as well as new features and offers!</p>
 
       <!-- subcription form component -->
       <app-subscribe-form></app-subscribe-form>
+      <button (click)="activateLoader()">Click</button>
+    </div>
+
+    <div class="loader" [@drop]="loading">
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="error" [@drop]="error">
+      <h4>Oops.. something went wrong!</h4>
+      <p>You may have already subscribed with this email!</p>
     </div>
 
     <!-- success message -->
-    <h3 class="success" *ngIf="subscribed">
-      Thanks for subscribing!
-    </h3>
+    <div class="success" [@drop]="success">
+      <h4>
+        Thanks for subscribing!
+      </h4>
+      <p>Keep a lookout for upcoming updates coming directly to your inbox!</p>
+    </div>
+
   </div>
 
   <div class="modal-footer">
