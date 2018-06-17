@@ -7,7 +7,7 @@ import { Http } from '@angular/http';
 export class SubscribeService {
 
   public modalEmitter: EventEmitter<string> = new EventEmitter<string>();
-  public subscribed = false;
+  public subscribed = !!this.getEmail();
 
   constructor(
     private http: Http
@@ -19,9 +19,18 @@ export class SubscribeService {
       .then(res => {
         this.modalEmitter.emit('success');
         this.subscribed = true;
+        this.setEmail(res.json().email);
         return res;
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log(err.json()));
+  }
+
+  setEmail(email: string) {
+    localStorage.setItem('subscriptionEmail', email);
+  }
+
+  getEmail() {
+    return localStorage.getItem('subscriptionEmail');
   }
 
   openModal() {
