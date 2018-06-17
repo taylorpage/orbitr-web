@@ -20,12 +20,12 @@ export class SubscribeService {
       .then(res => {
         this.modalEmitter.emit('success');
         this.subscribed = true;
-        this.setEmail(res.json().email);
+        this.setEmail(email);
         return res;
       })
       .catch(err => {
         this.modalEmitter.emit('error');
-        console.log(err.json())
+        console.log(err);
       });
   }
 
