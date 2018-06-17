@@ -1,0 +1,24 @@
+//Install express server
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const db = require('./db');
+const controller = require('./controller');
+const app = express();
+
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/../dist/orbitr-web'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/subscribe', controller.addSubscriber);
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/../dist/orbitr-web/index.html'));
+});
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080, function() {
+  console.log('Listening on port 8080...');
+});
+
