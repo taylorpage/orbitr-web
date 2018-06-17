@@ -7,15 +7,20 @@ import { Http } from '@angular/http';
 export class SubscribeService {
 
   public modalEmitter: EventEmitter<string> = new EventEmitter<string>();
+  public subscribed = false;
 
   constructor(
     private http: Http
   ) { }
 
   subscribe(email: string) {
-    return this.http.post('SERVER_API', { email: email })
+    return this.http.post('http://127.0.0.1:8080/subscribe', { email: email })
       .toPromise()
-      .then(res => res)
+      .then(res => {
+        this.modalEmitter.emit('success');
+        this.subscribed = true;
+        return res;
+      })
       .catch(err => console.log(err));
   }
 

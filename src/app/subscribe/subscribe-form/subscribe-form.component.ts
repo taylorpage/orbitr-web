@@ -36,5 +36,4 @@ export class SubscribeFormComponent implements OnInit {
         .then(message => console.log(message));
     }
   }
-
 }

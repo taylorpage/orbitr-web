@@ -10,7 +10,14 @@ import { SubscribeService } from '../shared/subscribe.service';
 })
 export class SubscribeModalComponent implements OnInit {
 
-  modalActions = new EventEmitter<string|MaterializeAction>();
+  public modalActions = new EventEmitter<string|MaterializeAction>();
+  public subscribed = this.subscribeService.subscribed;
+
+  private actionMap = {
+    open: this.openModal.bind(this),
+    close: this.closeModal.bind(this),
+    success: this.showSuccess.bind(this)
+  }
 
   constructor(
     private subscribeService: SubscribeService
@@ -18,7 +25,8 @@ export class SubscribeModalComponent implements OnInit {
 
   ngOnInit() {
     this.subscribeService.modalEmitter.subscribe(emission => {
-      emission === 'open' ? this.openModal() : this.closeModal();
+      const action: Function = this.actionMap[emission];
+      action();
     });
   }
 
@@ -27,6 +35,9 @@ export class SubscribeModalComponent implements OnInit {
   }
   closeModal() {
     this.modalActions.emit({ action: "modal", params: ['close'] });
+  }
+  showSuccess() {
+    this.subscribed = true;
   }
 
 }

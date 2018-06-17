@@ -6,12 +6,22 @@
   [materializeActions]="modalActions"
 >
   <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
 
-    <!-- subcription form component -->
-    <app-subscribe-form></app-subscribe-form>
+    <!-- subscription allowance -->
+    <div *ngIf="!subscribed">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+
+      <!-- subcription form component -->
+      <app-subscribe-form></app-subscribe-form>
+    </div>
+
+    <!-- success message -->
+    <h3 class="success" *ngIf="subscribed">
+      Thanks for subscribing!
+    </h3>
   </div>
+
   <div class="modal-footer">
     <a class="waves-effect waves-green btn-flat" (click)="closeModal()">
       close
