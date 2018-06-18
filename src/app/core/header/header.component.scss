@@ -1,4 +1,5 @@
 @import '../../../assets/modules/colors';
+@import '../../../assets/modules/base';
 
 .nav-wrapper {
 	background-color: $ob-black;
@@ -8,4 +9,27 @@
 	margin-top: 13px;
 	margin-left: 15px;
 	width: 80px;
+}
+
+.side-nav {
+  background-color: $ob-black;
+
+  li {
+    background-color: $ob-dark-grey;
+    border-bottom: 2px solid $ob-black;
+    transition: $ob-hover-transitions;
+
+    a {
+      color: white;
+    }
+  }
+
+  li:hover {
+    background-color: $ob-blue;
+  }
+}
+
+.planet {
+  width: 100%;
+  margin-bottom: -5px;
 }

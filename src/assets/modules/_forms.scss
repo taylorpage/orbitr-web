@@ -7,7 +7,7 @@
 .noUi-horizontal .noUi-handle,
 .noUi-vertical .noUi-handle,
 .noUi-target.noUi-horizontal .noUi-tooltip {
-  background-color: $ob-purple;
+  background-color: $ob-blue;
 }
 
 input[type="radio"]:not(:checked) + label:before,
@@ -17,8 +17,8 @@ input[type="radio"]:not(:checked) + label:after {
 
 input[type="radio"]:checked + label:after,
 input[type="radio"].with-gap:checked + label:after {
-  border-color: $ob-purple;
-  background-color: $ob-purple;
+  border-color: $ob-blue;
+  background-color: $ob-blue;
 }
 
 .radio-group {
@@ -37,7 +37,7 @@ input[type="radio"].with-gap:checked + label:after {
 }
 
 .select-wrapper input.select-dropdown {
-  border-bottom: 2px solid $ob-dark-grey;;
+  border-bottom: 2px solid $ob-dark-grey;
 }
 
 .select-wrapper span.caret {
@@ -69,8 +69,8 @@ input[type="radio"].with-gap:checked + label:after {
 
 .radio-group .checkbox-container.checked,
 .radio-group .radio-container.checked {
-  background-color: $ob-purple;
-  border: 2px solid $ob-purple;
+  background-color: $ob-blue;
+  border: 2px solid $ob-blue;
   transition-duration: $ob-button-transitions;
 }
 
