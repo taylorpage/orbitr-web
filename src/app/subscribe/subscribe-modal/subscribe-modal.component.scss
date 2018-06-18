@@ -8,6 +8,14 @@
     padding: 0px;
   }
 
+  .close {
+    padding: 0 9px;
+    margin: 5px;
+    text-align: right;
+    z-index: 2000;
+    float: right;
+  }
+
   .loader {
     text-align: center;
     margin-top: 180px;
@@ -24,7 +32,7 @@
   .form,
   .error {
     position: absolute;
-    top: 20px;
+    top: 40px;
     padding: 30px;
   }
 }

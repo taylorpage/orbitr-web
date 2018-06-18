@@ -1,4 +1,22 @@
 .btn {
   border-radius: $ob-border-radius;
-  background-color: $instagram-violet;
+}
+
+.btn-primary {
+  background-color: $ob-blue;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: $ob-blue;
+}
+
+.btn-secondary:hover,
+.btn-primary:hover {
+  background-color: $ob-blue-hover;
+  color: white;
+}
+
+.btn-primary:focus {
+  background-color: $ob-dark-blue;
 }

@@ -25,7 +25,6 @@ export class SubscribeService {
       })
       .catch(err => {
         this.modalEmitter.emit('error');
-        console.log(err);
       });
   }
 

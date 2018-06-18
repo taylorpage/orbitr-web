@@ -33,7 +33,7 @@ export class SubscribeFormComponent implements OnInit {
       const email = this.subscriptionForm.get('email').value;
 
       this.subsribeService.subscribe(email)
-        .then(message => console.log(message));
+        .then(message => message);
     }
   }
 }
