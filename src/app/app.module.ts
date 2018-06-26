@@ -22,6 +22,7 @@ import { SubscribeFormComponent } from './subscribe/subscribe-form/subscribe-for
 import { VideoComponent } from './video/video.component';
 
 import { appRoutes } from './app.router';
+import { PageMainComponent } from './pages/page-main/page-main.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { appRoutes } from './app.router';
     MobileComponent,
     SubscribeMainComponent,
     SubscribeFormComponent,
-    VideoComponent
+    VideoComponent,
+    PageMainComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
