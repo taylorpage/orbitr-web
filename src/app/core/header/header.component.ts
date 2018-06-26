@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public sideNavParams = {
+    closeOnClick: true
+  };
+
   constructor() { }
 
   ngOnInit() {
