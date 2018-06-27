@@ -24,6 +24,7 @@ import { VideoComponent } from './video/video.component';
 import { appRoutes } from './app.router';
 import { PageMainComponent } from './pages/page-main/page-main.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
+import { PageAboutComponent } from './pages/page-about/page-about.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PageTeamComponent } from './pages/page-team/page-team.component';
     SubscribeFormComponent,
     VideoComponent,
     PageMainComponent,
-    PageTeamComponent
+    PageTeamComponent,
+    PageAboutComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
