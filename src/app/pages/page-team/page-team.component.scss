@@ -1,0 +1,22 @@
+@import '../../../assets/modules/colors';
+@import '../../../assets/modules/media-queries';
+
+.team {
+  background-color: white;
+  position: relative;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.photo {
+  background-color: $ob-teal;
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+}
+
+@media #{$small-and-down} {
+  .photo {
+    margin: 0 auto;
+  }
+}

@@ -23,6 +23,7 @@ import { VideoComponent } from './video/video.component';
 
 import { appRoutes } from './app.router';
 import { PageMainComponent } from './pages/page-main/page-main.component';
+import { PageTeamComponent } from './pages/page-team/page-team.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { PageMainComponent } from './pages/page-main/page-main.component';
     SubscribeMainComponent,
     SubscribeFormComponent,
     VideoComponent,
-    PageMainComponent
+    PageMainComponent,
+    PageTeamComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
