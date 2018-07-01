@@ -25,6 +25,7 @@ import { appRoutes } from './app.router';
 import { PageMainComponent } from './pages/page-main/page-main.component';
 import { PageTeamComponent } from './pages/page-team/page-team.component';
 import { PageAboutComponent } from './pages/page-about/page-about.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PageAboutComponent } from './pages/page-about/page-about.component';
     VideoComponent,
     PageMainComponent,
     PageTeamComponent,
-    PageAboutComponent
+    PageAboutComponent,
+    PageNotFoundComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
